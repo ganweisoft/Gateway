@@ -1,6 +1,6 @@
-# MEMBER CODE OF CONDUCT
+# Contributor Covenant Code of Conduct
 
-The .https://github.com/ganweisoft was created to doster an open, innovative, inclusive and welcoming community around open source community clarify expected behaviour in our communities we have adopted the [Contributor Covenant](contributor-covenant.org). This code of conduct has been adopted by [many other open source communities](contributor-covenant.org/adopters) and we feel it expresses our values well.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE-OF-CONDUCT.md)
 
 ### Our Pledge
 
