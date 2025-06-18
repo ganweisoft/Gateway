@@ -9,7 +9,7 @@
 English | [简体中文](README-CN.md)
 
 Gateway is a high-performance, centralized communication and scheduling module for various device plugins. It uniformly converts heterogeneous data into standardized models and delivers core functionalities such as real-time data storage, alarm triggering, linkage control, and task planning.
-## Architecture overview
+## Architecture Overview
 
 ![Gateway drawio](https://github.com/ganweisoft/.github/blob/main/images/architecture.gateway.en.svg)
 
