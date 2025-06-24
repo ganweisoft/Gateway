@@ -1,8 +1,9 @@
-﻿using GWDataCenter.Database;
+﻿using GWDataCenter;
+using GWDataCenter.Database;
 using System;
 using System.Collections.Generic;
 using System.IO;
-namespace GWDataCenter
+namespace OpenGWDataCenter.Model
 {
     public enum SafeTimeType
     {
@@ -524,7 +525,7 @@ namespace GWDataCenter
                             alarmflag = "0-1";
                             alarmLevel = level_r;
                             proc_advice = proc_advice_r;
-                            if ((GetSafeTimeState() == SafeTimeType.ShowRealTimeState) || (GetSafeTimeState() == SafeTimeType.NoSafeTime))
+                            if (GetSafeTimeState() == SafeTimeType.ShowRealTimeState || GetSafeTimeState() == SafeTimeType.NoSafeTime)
                                 yxState = evt_01;
                             else
                                 yxState = evt_10;
@@ -588,7 +589,7 @@ namespace GWDataCenter
                             alarmflag = "1-0";
                             alarmLevel = level_d;
                             proc_advice = proc_advice_r;
-                            if ((GetSafeTimeState() == SafeTimeType.ShowRealTimeState) || (GetSafeTimeState() == SafeTimeType.NoSafeTime))
+                            if (GetSafeTimeState() == SafeTimeType.ShowRealTimeState || GetSafeTimeState() == SafeTimeType.NoSafeTime)
                                 yxState = evt_10;
                             else
                                 yxState = evt_01;
@@ -911,7 +912,7 @@ namespace GWDataCenter
         int oldtotalmill;
         bool bSameValue = false;
         bool bNewFile = false;
-        Int64 key;
+        long key;
         void RecordCurve(bool bSpanDay)
         {
             try
@@ -923,7 +924,7 @@ namespace GWDataCenter
             }
             catch (Exception e)
             {
-                GWDataCenter.DataCenter.WriteLogFile("RecordCurve error>>" + General.GetExceptionInfo(e));
+                DataCenter.WriteLogFile("RecordCurve error>>" + General.GetExceptionInfo(e));
             }
         }
         void RecordCurve()

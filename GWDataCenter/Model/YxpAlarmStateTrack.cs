@@ -1,5 +1,5 @@
 ﻿using GWDataCenter.Database;
-namespace GWDataCenter
+namespace OpenGWDataCenter.Model
 {
     public enum YXAlarmStateType
     {

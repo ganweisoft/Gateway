@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using OpenGWDataCenter.Model;
+using System.Collections.Generic;
 namespace GWDataCenter
 {
     public interface ICommunication

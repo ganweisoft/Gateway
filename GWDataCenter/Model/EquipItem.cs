@@ -1,4 +1,5 @@
-﻿using GWDataCenter.Database;
+﻿using GWDataCenter;
+using GWDataCenter.Database;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-namespace GWDataCenter
+namespace OpenGWDataCenter.Model
 {
     public class SafeTimeSpan
     {
@@ -40,7 +41,7 @@ namespace GWDataCenter
         public List<SafeTimeSpan> SafeTimeSpanList = new List<SafeTimeSpan>();
         Assembly dll;
         IEquip icommunication;
-        object datafrash = (object)false;
+        object datafrash = false;
         object state;
         public Dictionary<int, YCItem> YCItemDict = new Dictionary<int, YCItem>();
         public Dictionary<int, YXItem> YXItemDict = new Dictionary<int, YXItem>();
@@ -245,12 +246,12 @@ namespace GWDataCenter
             set
             {
                 if (value == EquipState.Initial)
-                    state = (EquipState)value;
+                    state = value;
                 if (value != (EquipState)state)
                 {
                     if (value != EquipState.NoCommunication && (EquipState)state == EquipState.NoCommunication)
                     {
-                        state = (EquipState)value;
+                        state = value;
                         if (EquipCommOk != null)
                         {
                             evtGUID = Guid.NewGuid().ToString();
@@ -264,7 +265,7 @@ namespace GWDataCenter
                     }
                     if (value == EquipState.HaveAlarm)
                     {
-                        state = (EquipState)value;
+                        state = value;
                         EquipHaveAlarm?.Invoke(this, new EventArgs());
                         StationItem.StationAlarmState = (int)StationItem.StationAlarmState + 1;
                         EqpStateChanged?.Invoke(this, new EventArgs());
@@ -272,7 +273,7 @@ namespace GWDataCenter
                     }
                     if (value == EquipState.CommunicationOK && (EquipState)state == EquipState.HaveAlarm)
                     {
-                        state = (EquipState)value;
+                        state = value;
                         EquipNoAlarm?.Invoke(this, new EventArgs());
                         StationItem.StationAlarmState = (int)StationItem.StationAlarmState - 1;
                         EqpStateChanged?.Invoke(this, new EventArgs());
@@ -284,7 +285,7 @@ namespace GWDataCenter
                         {
                             StationItem.StationAlarmState = (int)StationItem.StationAlarmState - 1;
                         }
-                        state = (EquipState)value;
+                        state = value;
                         if (EquipCommError != null)
                         {
                             evtGUID = Guid.NewGuid().ToString();
@@ -301,11 +302,11 @@ namespace GWDataCenter
                     }
                     if (value == EquipState.BackUp)
                     {
-                        state = (EquipState)value;
+                        state = value;
                         SetYcYxNoCommState();
                         EqpStateChanged?.Invoke(this, new EventArgs());
                     }
-                    state = (EquipState)value;
+                    state = value;
                     EqpStateChanged?.Invoke(this, new EventArgs());
                 }
             }
@@ -323,7 +324,7 @@ namespace GWDataCenter
             {
                 lock (datafrash)
                 {
-                    datafrash = (object)value;
+                    datafrash = value;
                 }
             }
         }
@@ -640,7 +641,7 @@ namespace GWDataCenter
                 }
                 try
                 {
-                    List<int> YCItemDict_list = (from d in YCItemDict select d.Key).ToList<int>();
+                    List<int> YCItemDict_list = (from d in YCItemDict select d.Key).ToList();
                     if (YCItemDict_list.Except(yc_no_list).Count() > 0)
                     {
                         foreach (int k in YCItemDict_list.Except(yc_no_list))
@@ -681,7 +682,7 @@ namespace GWDataCenter
                 }
                 try
                 {
-                    List<int> YXItemDict_list = (from d in YXItemDict select d.Key).ToList<int>();
+                    List<int> YXItemDict_list = (from d in YXItemDict select d.Key).ToList();
                     if (YXItemDict_list.Except(yx_no_list).Count() > 0)
                     {
                         foreach (int k in YXItemDict_list.Except(yx_no_list))
@@ -891,7 +892,7 @@ namespace GWDataCenter
             }
             lock (EquipRWstate)
             {
-                this.ClearAllEvents();
+                ClearAllEvents();
             }
         }
     }

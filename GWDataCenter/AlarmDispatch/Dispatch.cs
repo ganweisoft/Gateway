@@ -1,6 +1,7 @@
 ﻿using GWDataCenter.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using OpenGWDataCenter.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
