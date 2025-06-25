@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿﻿// Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
+using System.Net;
 using System.Net.Sockets;
 namespace GWDataCenter
 {
