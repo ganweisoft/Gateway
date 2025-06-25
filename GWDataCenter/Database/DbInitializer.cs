@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿﻿// Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using System;

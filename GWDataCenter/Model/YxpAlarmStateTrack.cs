@@ -1,4 +1,5 @@
-﻿using GWDataCenter.Database;
+﻿﻿// Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
+using GWDataCenter.Database;
 namespace OpenGWDataCenter.Model
 {
     public enum YXAlarmStateType

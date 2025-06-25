@@ -1,4 +1,5 @@
-﻿using OpenGWDataCenter.Model;
+﻿﻿// Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
+using OpenGWDataCenter.Model;
 using System.Collections.Generic;
 namespace GWDataCenter
 {
