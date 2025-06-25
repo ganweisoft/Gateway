@@ -61,7 +61,7 @@ If you would like to contribute to one of our repositories, first identify the s
 
 ### Submitting a pull request
 
-If you don't know what a pull request is read this article: <[pull-requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)>. Make sure the repository can build and all tests pass. Familiarize yourself with the project workflow and our coding conventions. The coding, style, and general engineering guidelines are published on the [Engineering guidelines](https://github.com/ganweisoft/IoTCenterWebAPi/wiki/Engineering%E2%80%90guidelines)) page.
+If you don't know what a pull request is read this article: <[pull-requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)>. Make sure the repository can build and all tests pass. Familiarize yourself with the project workflow and our coding conventions. The coding, style, and general engineering guidelines are published on the [Engineering guidelines](https://github.com/ganweisoft/WebPlugins/wiki/Engineering%E2%80%90guidelines)) page.
 
 ### Tests
 
