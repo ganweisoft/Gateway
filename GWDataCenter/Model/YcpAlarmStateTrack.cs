@@ -1,4 +1,4 @@
-﻿﻿// Copyright (c) 2004 Shenzhen Ganwei Software Technology Co., Ltd
+﻿﻿// Copyright (c) 2004-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 using GWDataCenter.Database;
 namespace OpenGWDataCenter.Model

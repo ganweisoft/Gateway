@@ -1,4 +1,4 @@
-﻿﻿// Copyright (c) 2004 Shenzhen Ganwei Software Technology Co., Ltd
+﻿﻿// Copyright (c) 2004-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 namespace GWDataCenter.Database
