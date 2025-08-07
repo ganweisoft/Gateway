@@ -1,4 +1,4 @@
-﻿﻿// Copyright (c) 2004-2025 Shenzhen Ganwei Software Technology Co., Ltd
+﻿﻿// Copyright (c) 2004-2025  Beijing TOMs Software Technology Co., Ltd
 using OpenGWDataCenter.Model;
 using System;
 using System.Collections.Generic;
